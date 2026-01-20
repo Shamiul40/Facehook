@@ -21,7 +21,7 @@ export default function LoginForm() {
     <form onSubmit={handleSubmit(onSubmitForm)} className="border-b border-[#3F3F3F] pb-10 lg:pb-[60px]">
       {/* <!-- email --> */}
       <div className="mb-6">
-        <Fields label={"email"} htmlFor={"email"} error={errors}>
+        <Fields label={"email"} htmlFor={"email"} error={errors.email}>
           <input
            {...register("email", {required : "email is required"})}
 
@@ -34,7 +34,7 @@ export default function LoginForm() {
       </div>
       {/* <!-- password --> */}
       <div className="mb-6">
-        <Fields label={"password"} htmlFor={"password"} error={errors}>
+        <Fields label={"password"} htmlFor={"password"} error={errors.password}>
           <input
            {...register("password", {required : "password is required",
             minLength :{
