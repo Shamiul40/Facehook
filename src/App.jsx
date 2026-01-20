@@ -6,7 +6,7 @@ function App() {
 
   return (
     <>
-      <h1>shamiul islam</h1>
+      <h1 className='font'>shamiul</h1>
     </>
   )
 }
