@@ -6,7 +6,7 @@ import { NavLink } from "react-router";
 export default function Login() {
   return (
     <>
-      <main className="flex min-h-screen items-center justify-center bg-deepDark py-8">
+      <main className="flex min-h-screen items-center justify-center bg-deepDark py-8 px-8">
         <div className="max-w-[1368px] flex-1">
           <div className="container grid items-center gap-8 lg:grid-cols-2">
             {/* <!-- illustration and title --> */}
