@@ -1,10 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router'
 
-import logo from "../../assets/images/logo.png"
-import home from "../../assets/icons/home.png"
-import notification from "../../assets/icons/notification.png"
-import avatar  from "../../assets/images/avatars.png"
+import logo from "../../assets/images/logo.svg"
+import home from "../../assets/icons/home.svg"
+import notification from "../../assets/icons/notification.svg"
+import avatar  from "../../assets/images/avatars/avatar_1.png"
+import Logout from '../../auth/Logout'
 
 export default function Header() {
   return (
@@ -19,14 +20,13 @@ export default function Header() {
       <div className="flex items-center space-x-4">
         <Link to="/" className="btn-primary">
           <img src={ home} alt="Home" />
-          Home
+          
         </Link>
         <button className="icon-btn">
           <img src={notification} alt="Notification" />
         </button>
-        <button className="icon-btn">
-          <img src="./assets/icons/logout.svg" alt="Logout" />
-        </button>
+        
+        <Logout></Logout>
 
         <button className="flex-center !ml-8 gap-3">
           <span className="text-lg font-medium lg:text-xl">Sumit</span>
