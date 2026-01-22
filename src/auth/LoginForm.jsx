@@ -2,6 +2,7 @@ import React from "react";
 import Fields from "../Components/Common/Fields";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router";
+import { useAuth } from "../hooks/useAuth";
 
 export default function LoginForm() {
   const {
@@ -11,10 +12,13 @@ export default function LoginForm() {
   } = useForm();
   
   const navigate = useNavigate()
+  const { setAuth } = useAuth();
 
   const onSubmitForm=(formData)=>{
+    setAuth({ user: { email: formData.email } });
     navigate("/")
     console.log(formData)
+    
   }
 
   return (
